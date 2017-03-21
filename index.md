@@ -378,4 +378,6 @@ After the new `hack` dependency version is pulled down to the `node_modules` dir
 
 Once the vendor file is updated pop open your favorite dev tools and test the changes by previewing your site on mobile, tablet and desktop at different display resolutions and orientations, making any tweaks necessary to the `hack.css` style overrides indicated in `critical-theme.css.html`. And, finally, adjust your [Customized CSS](#customizing-css) if necessary.
 
-[lazysizes]: https://github.com/aFarkas/lazysizes
+## License
+
+MIT License 2017 © Comfusion LLC
