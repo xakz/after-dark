@@ -1,4 +1,4 @@
-![Theme screenshots](https://github.com/comfusion/after-dark/blob/master/images/minimal-mac.png "After Dark running on a MacBook and iPhone")
+![Theme screenshots](https://raw.githubusercontent.com/comfusion/after-dark/master/images/minimal-mac.png "After Dark running on a MacBook and iPhone")
 
 ## Demo
 
