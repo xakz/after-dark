@@ -6,8 +6,8 @@ Head to [Hack Cabin](https://hackcabin.com) for a **production example** running
 
 ## Features
 
-- High-performance pages load in a single HTTP request
-- Generates ~800-1000 pages per second
+- High-performance pages load content in a single HTTP request
+- Capable of generating ~800-1000 pages per second
 - Optimized for mobile, tablet, desktop and terminal browsing
 - [Theme Variants](#theme-variants) for light and dark display
 - [Section Menu](#section-menu) for global site navigation
@@ -15,13 +15,12 @@ Head to [Hack Cabin](https://hackcabin.com) for a **production example** running
 - [Related Content](#related-content) for increased page views and reader loyalty
 - Accessible [Table of Contents](#table-of-contents) with smooth scroll
 - SEO-optimized using [OpenGraph](https://opg.me), [Schema Structured Data](https://moz.com/learn/seo/schema-structured-data) and Meta tags
-- Google Analytics using the [internal async template](https://gohugo.io/extras/analytics)
-- Post comments with [Disqus](https://disqus.com/) using the [internal template](https://gohugo.io/extras/comments)
+- Google Analytics async tracking snippet with preloading support
+- Post comments with [Disqus](https://disqus.com/)
 - Reading time and post summaries set user expectations
 - [Modification Dating](#modification-dating) adds visibility to fresh content
-- Configurable bylines including category and tag taxonomy listings, author and word count
-- [Block Templates](https://gohugo.io/templates/blocks/) for foolproof layout reuse and extension
-- Extensible [taxonomy terms template](https://gohugo.io/templates/terms)
+- [Syntax Highlighting](#code-highlighting) with optional line numbers and ability to call attention to individual lines
+- Configurable post bylines including category and tag taxonomy listings, author and word count
 - Simple list pagination with page indicator
 - Site verification with Google, Bing, Alexa and Yandex
 - 404 page with engaging [animated background](https://hackcabin.com/post/after-dark-error-page-redesign/)
@@ -299,6 +298,76 @@ And, finally, if you're using Hugo `v0.18` or better, you can also add an `_inde
 
 To learn more about how crawlers use this feature read [block search indexing with meta tags](https://support.google.com/webmasters/answer/93710).
 
+### Markdown Output
+
+Gain more control over markdown conversion to HTML. By modifying the markdown processor settings you can take advantage of [Blackfriday](https://github.com/russross/blackfriday) features not enabled by default.
+
+To customize conversion output add a `[blackfriday]` section to your site's `config.toml` file like so:
+
+```toml
+[blackfriday]
+  hrefTargetBlank = true
+  fractions = false
+```
+
+Overrides to theme markdown processing defaults are available from page front matter as well, giving you control on a page-by-page basis.
+
+See the Hugo docs for additional [configuration options](http://gohugo.io/overview/configuration/#configure-blackfriday-rendering).
+
+### Shortcodes
+
+Keep your content <abbr title="Don't Repeat Yourself">DRY</abbr> and improve thematic consistency across your site. To help achieve this, Hugo provides [Shortcodes](https://gohugo.io/extras/shortcodes).
+
+Shortcodes are very powerful, and can be used to achieve functionality not otherwise available in the markdown processor. Hugo provides a number of [built-in shortcodes](https://gohugo.io/extras/shortcodes#built-in-shortcodes) you can use on your site. And After Dark provides some as well.
+
+Here's the `blockquote` shortcode provided by After Dark:
+
+```html
+<blockquote {{ with .Get "class" }}class="{{ . }}"{{ end }} {{ with .Get "citelink" }}cite="{{ . }}"{{ end }}>
+  {{ .Inner }}
+  {{ with .Get "citelink" }}
+    <cite><a target="_blank" href="{{ . }}">{{ $.Get "cite" }}</a></cite>
+  {{ else }}
+    <cite>{{ .Get "cite" }}</cite>
+  {{ end }}
+</blockquote>
+```
+
+Use it in your markdown files like:
+
+```html
+{{< blockquote cite="Bitly" citelink="https://bitly.is/2mkxskj" >}}
+  <p>When you create your own Branded Short Domain, you can expect to see up to a 34% increase in CTR when compared to standard bit.ly links.</p>
+{{< /blockquote >}}
+```
+
+Additional theme-provided shortcodes at your disposal:
+
+- `figure` - Similar to the Hugo built-in, but with [Intelligent Lazyloading](#intelligent-lazyloading), an adjusted caption title and smaller caption text.
+
+To create your own custom shortcodes add a `layouts/shortcodes` directory to your site, place your shortcodes within and start using them in your markdown content.
+
+Reference the Hugo docs for [shortcode usage instructions](https://gohugo.io/extras/shortcodes#using-a-shortcode).
+
+### Syntax Highlighting
+
+Provide a richer experience when sharing code snippets on your site. After Dark provides support for code highlighting using the lovely [One Dark](https://github.com/atom/one-dark-syntax) or [One Light](https://github.com/atom/one-light-syntax) syntax themes used in [Atom](https://github.com/atom/atom).
+
+**Why not use Highlight.js?** Because it's slow, doesn't support line numbers or highlighting of individual lines. In addition, JS-based solutions force browsers to do the same work over and over again when that work can be done once at site generation.
+
+To set-up syntax highlighting for your After Dark site:
+
+- Follow Hugo's [Pygments installation](https://gohugo.io/extras/highlighting/#pygments) instructions.
+- Open the `themes/after-dark` folder and run `npm i`
+- Then open `./node_modules/atom-one-pygments` and `npm i`
+- Once dependencies are instaled, issue `npm run build` to generate the stylesheets to the `./dist` directory
+
+Then choose either `./dist/light.css` or `dark.css` depending on your [Theme Variant](#theme-variants), and copy the contents of the file into your [Custom CSS](#custom-css) file.
+
+Once configured, syntax highlighting can be achieved using the Hugo built-in [`highlight` shortcode](https://gohugo.io/extras/shortcodes#highlight).
+
+Reference Hugo's Syntax Highlighting docs for [additional usage instructions](https://gohugo.io/extras/highlighting/#usage).
+
 ### Custom CSS
 
 To add your own theme css or override existing CSS without having to change theme files do the following:
@@ -318,61 +387,6 @@ Example customization file:
 
 Your customizations will automatically be added to generated pages, inline in the document `HEAD`. Thanks to [@rsommerard](https://github.com/rsommerard) for making the suggestion.
 
-If you choose to modify the Hack CSS
-
-### Markdown Output
-
-Gain more control over markdown conversion to HTML. By modifying the markdown processor settings you can take advantage of [Blackfriday](https://github.com/russross/blackfriday) features not enabled by default.
-
-To customize conversion output add a `[blackfriday]` section to your site's `config.toml` file like so:
-
-```toml
-[blackfriday]
-  hrefTargetBlank = true
-  fractions = false
-```
-
-Overrides to theme markdown processing defaults are available from page front matter as well, giving you control on a page-by-page basis.
-
-See the Hugo docs for additional [configuration options](http://gohugo.io/overview/configuration/#configure-blackfriday-rendering).
-
-### Shortcodes
-
-Keep your content <abbr title="Don't Repeat Yourself">DRY</abbr> to improve thematic consistency throughout your site. To help achieve this, Hugo provides [Shortcodes](https://gohugo.io/extras/shortcodes). Shortcodes are very powerful, and can be used to achieve functionality not otherwise available in the markdown processor.
-
-To create your own custom shortcodes add a `layouts/shortcodes` directory to your site and place your shortcodes within. Here's an example shortcode overriding Hugo's [built-in `figure` shortcode](https://gohugo.io/extras/shortcodes#figure) to leverage After Dark's [Intelligent Lazyloading](#intelligent-lazyloading) feature and improve display for use with the theme:
-
-```html
-<!--{{/*
-  Similar to the internal shortcode, but with image lazyloading and
-  and adjusted caption title and small caption text.
-*/}}-->
-<figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
-  {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
-    <img class="lazyload" data-src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} />
-  {{ if .Get "link" }}</a>{{ end }}
-  {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
-  <figcaption>{{ if isset .Params "title" }}
-    <header><b>{{ .Get "title" }}</b></header>{{ end }}
-    {{ if or (.Get "caption") (.Get "attr")}}
-    <small>{{ .Get "caption" }}
-    {{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
-      {{ .Get "attr" }}
-    {{ if .Get "attrlink"}}</a> {{ end }}
-    </small>{{ end }}
-  </figcaption>
-  {{ end }}
-</figure>
-```
-
-To use it create a file called `figure.html` with the above contents in your `shortcodes` directory and use it like:
-
-```html
-{{< figure src="/gear/southeast-asia-carry-on-packing-list/" caption="Southeast Asia Carry-On Packing List: Digital Nomad Edition" >}}
-```
-
-Reference the Hugo docs for [additional usage instructions](https://gohugo.io/extras/shortcodes#figure), including caption titles, attribution links and more.
-
 ### Theme Variants
 
 [`hack.css`](http://hackcss.com/) provides a few variants you may wish to use instead of the After Dark defaults. To download them do an `npm i` from `/themes/after-dark/` (assumes NPM installed).
@@ -387,8 +401,12 @@ Once the vendor file is updated, open your favorite dev tools and test the chang
 
 And, finally, adjust your [Customized CSS](#custom-css), 404 page and `/meta/theme-color` as necessary.
 
+## Contributing
+
+There's only one rule...there are no rules.
+
 ## License
 
-MIT License 2017 © Comfusion LLC
+ISC
 
 [lazysizes]: https://github.com/aFarkas/lazysizes
