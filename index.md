@@ -3,7 +3,7 @@
 ## Features
 
 <details>
-  <summary>
+  <summary style="padding-bottom:1em">
     View the full list of features
   </summary>
   <table>
