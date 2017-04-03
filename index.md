@@ -16,7 +16,7 @@
     <tbody>
       <tr>
         <td>Deceptive Simplicity</td>
-        <td>After Dark is a <a target="hugo" href="http://themes.gohugo.io/">Hugo theme</a>, making it a suitable starting point for **novice and advanced developers** alike. It advances using the <abbr title="Extreme Programming">XP</abbr>'s _code for today_ philosophy, and, as a result, includes only what's necessary to create and run your site, and nothing more.</td>
+        <td>After Dark is a <a target="hugo" href="http://themes.gohugo.io/">Hugo theme</a>, making it a suitable starting point for <b>novice and advanced developers</b> alike. It advances using a "code for today" philosophy, and includes only what's necessary to create and run your site &endash; nothing more.</td>
       </tr>
       <tr>
         <td>Inclusive Design</td>
@@ -24,11 +24,11 @@
       </tr>
       <tr>
         <td>Performance Optimized</td>
-        <td>Page content and styles **load in a single request** on all pages. External resources, if present, are loaded asynchronously, and only when necessary. This keeps pages zippy, and affords **~1 second page loads over 2G**.</td>
+        <td>Page content and styles <b>load in a single request</b> on all pages. External resources, if present, are loaded asynchronously, and only when necessary. This keeps pages zippy, and affords <b>~1 second page loads over 2G</b> when hosted using a <abbr title="Content Delivery Network">CDN</abbr>.</td>
       </tr>
       <tr>
         <td>Vertical Scaling</td>
-        <td>After Dark is capable of generating **~1000 pages per second** thanks to <a target="hugo" href="https://gohugo.io/">Hugo</a>, and is likely to become faster over time.</td>
+        <td>After Dark is capable of generating <b>~1000 pages per second</b> thanks to <a target="hugo" href="https://gohugo.io/">Hugo</a>, and is likely to become faster over time.</td>
       </tr>
       <tr>
         <td><a href="#seo-and-ux">Search Awareness</a></td>
@@ -52,11 +52,11 @@
       </tr>
       <tr>
         <td><a href="#related-content">Related Content</a></td>
-        <td>Promote more of your content to your site visitors. By offering your readers more content that's relevant to them you can **increase your site's page views**, the time spent on your site and reader loyalty.</td>
+        <td>Promote more of your content to your site visitors. By offering your readers more content that's relevant to them you can <b>increase your site's page views</b>, the time spent on your site and reader loyalty.</td>
       </tr>
       <tr>
         <td><a href="#table-of-contents">Table Of Contents</a></td>
-        <td>Help users locate and share information on your site. By providing a <abbr title="Table Of Contents">TOC</abbr>, users will spend less time scrolling to locate information in larger documents, and are more likely to _deep link_ to specific information on a page.</td>
+        <td>Help users locate and share information on your site. By providing a <abbr title="Table Of Contents">TOC</abbr>, users will spend less time scrolling to locate information in larger documents, and are more likely to <i>deep link</i> to specific information on a page.</td>
       </tr>
       <tr>
         <td>Analytics</td>
@@ -68,7 +68,7 @@
       </tr>
       <tr>
         <td>Reading Time</td>
-        <td>Set user expectations up-front. After Dark provides **estimated reading time** for each post near the top of the page. This feature is automatic and assumes a reading speed of 200-250 words per minute.</td>
+        <td>Set user expectations up-front. After Dark provides <b>estimated reading time</b> for each post near the top of the page. This feature is automatic and assumes a reading speed of 200-250 words per minute.</td>
       </tr>
       <tr>
         <td><a href="#modification-dating">Modification Dating</a></td>
@@ -76,11 +76,11 @@
       </tr>
       <tr>
         <td><a href="#syntax-highlighting">Syntax Highlighting</a></td>
-        <td>Share code snippets with style. After Dark provides **opt-in syntax highlighting** with support for line numbers and highlighted lines.</td>
+        <td>Share code snippets with style. After Dark provides <b>opt-in syntax highlighting</b> with support for line numbers and highlighted lines.</td>
       </tr>
       <tr>
         <td>Taxonomy Pages</td>
-        <td>Help users discover taxonomic content. After Dark automatically generates **taxonomy and taxonomy terms pages**, and links to them in post bylines.</td>
+        <td>Help users discover taxonomic content. After Dark automatically generates <b>taxonomy and taxonomy terms pages</b>, and links to them in post bylines.</td>
       </tr>
       <tr>
         <td>Post Bylines</td>
@@ -100,7 +100,7 @@
       </tr>
       <tr>
         <td>Accessibility</td>
-        <td>After Dark uses semantic HTML5 markup to provide a better experience for aural readers and facilitates **navigation via keyboard** only.</td>
+        <td>After Dark uses semantic HTML5 markup to provide a better experience for aural readers and facilitates <b>navigation via keyboard</b> only.</td>
       </tr>
     </tbody>
   </table>
