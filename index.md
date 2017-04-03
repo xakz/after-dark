@@ -2,6 +2,11 @@
 
 ## Features
 
+<details>
+<summary>
+  View the full list of features.
+</summary>
+<div markdown=1>
 | Feature        | Summary        |
 | :------------- | :------------- |
 | Deceptive Simplicity | After Dark is a <a target="hugo" href="http://themes.gohugo.io/">Hugo theme</a>, making it a suitable starting point for **novice and advanced developers** alike. It advances using the <abbr title="Extreme Programming">XP</abbr>'s _code for today_ philosophy, and, as a result, includes only what's necessary to create and run your site, and nothing more. |
@@ -25,6 +30,10 @@
 | Pagination | Pagination can be hard. After Dark makes it easy with simple list pagination with page indication. |
 | Accessibility | After Dark uses semantic HTML5 markup to provide a better experience for aural readers and facilitates **navigation via keyboard** only. |
 | Animated Error Page | Limit bounce rate when URL error occur. After Dark provides an <a target="feature" href="https://hackcabin.com/post/after-dark-error-page-redesign/">engaging 404 page</a> with animated background. |
+</div>
+</details>
+
+
 
 ## Demo & Tutorial
 
