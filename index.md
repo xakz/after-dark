@@ -483,7 +483,7 @@ And, finally, adjust your [Customized CSS](#custom-css), 404 page and `/meta/the
 
 ## Contributing
 
-There's only one rule...there are no rules.
+If you think you've spotted a bug or would like to make an enhancement suggestion, please feel free to open an issue on GitHub. If you have a site or derivative work built using After Dark you would like to share, please feel free to add it to the Wiki. For general questions, please feel free to reach out to me at: https://habd.as/contact
 
 ## License
 
