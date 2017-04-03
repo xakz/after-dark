@@ -160,9 +160,6 @@ footnoteReturnLinkContents = "↩" # Provides a nicer footnote return link
 
 That's it! Everything else is optional. Read on to learn how to configure specific features and customize the theme.
 
-<hr>
-<hr>
-
 ## Customizing
 
 ### Section Menu
