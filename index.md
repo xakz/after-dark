@@ -16,7 +16,7 @@
     <tbody>
       <tr>
         <td>Deceptive Simplicity</td>
-        <td>After Dark is a <a target="hugo" href="http://themes.gohugo.io/">Hugo theme</a>, making it a suitable starting point for <b>novice and advanced developers</b> alike. It advances using a "code for today" philosophy, and includes only what's necessary to create and run your site &endash; nothing more.</td>
+        <td>After Dark is a <a target="hugo" href="http://themes.gohugo.io/">Hugo theme</a>, making it a suitable starting point for <b>novice and advanced developers</b> alike. It advances using a "code for today" philosophy, and includes only what's necessary to create and run your site &ndash; nothing more.</td>
       </tr>
       <tr>
         <td>Inclusive Design</td>
