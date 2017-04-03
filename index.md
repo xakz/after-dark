@@ -158,9 +158,9 @@ footnoteReturnLinkContents = "↩" # Provides a nicer footnote return link
   theme_variant = "" # Optional, for use to overriding default theme
 ```
 
-That's it! Everything else is optional.
+That's it! Everything else is optional. Read on to learn how to configure specific features and customize the theme.
 
-Read on to learn how to configure specific features and customize the theme. And when you're ready, learn to [host your site on AWS](http://go.habd.as/zero-to-http-2) to receive a free year of web hosting and eliminate tiered pricing plans.
+<hr>
 
 ## Customizing
 
