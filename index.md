@@ -15,8 +15,12 @@
     </thead>
     <tbody>
       <tr>
-        <td>Deceptive Simplicity</td>
-        <td>After Dark is a <a target="hugo" href="http://themes.gohugo.io/">Hugo theme</a>, making it a suitable starting point for <b>novice and advanced developers</b> alike. It advances using a "code for today" philosophy, and includes only what's necessary to create and run your site &ndash; nothing more.</td>
+        <td>Opinionated Design</td>
+        <td>After Dark is a <a target="feature" href="http://themes.gohugo.io/">Hugo theme</a>, making it a suitable starting point for <b>novice and advanced developers</b> alike. It advances using the "Code for today, not for tomorrow" philosophy of <abbr title="eXtreme Programming">XP</abbr>, and includes only what's necessary to create and run your site &ndash; nothing more.</td>
+      </tr>
+      <tr>
+        <td>Semantic Versioning</td>
+        <td>Predictable changes enable theme users stay up-to-date with what's happening. After Dark uses <a target="feature" href="http://semver.org/">Semantic Versioning</a> and maintains a <a target="feature" href="https://github.com/comfusion/after-dark/blob/master/CHANGELOG.md">CHANGELOG</a> for easy consumption.
       </tr>
       <tr>
         <td>Inclusive Design</td>
@@ -28,7 +32,7 @@
       </tr>
       <tr>
         <td>Vertical Scaling</td>
-        <td>After Dark is capable of generating <b>~1000 pages per second</b> thanks to <a target="hugo" href="https://gohugo.io/">Hugo</a>, and is likely to become faster over time.</td>
+        <td>After Dark is capable of generating <b>~1000 pages per second</b> thanks to <a target="feature" href="https://gohugo.io/">Hugo</a>, and is likely to become faster over time.</td>
       </tr>
       <tr>
         <td><a href="#seo-and-ux">Search Awareness</a></td>
@@ -44,7 +48,7 @@
       </tr>
       <tr>
         <td><a href="#section-menu">Section Menu</a></td>
-        <td>Add and customize your site's global navigation. After Dark uses Hugo's <a target="hugo" href="https://gohugo.io/extras/menus#section-menu-for-the-lazy-blogger">Section Menu for "the Lazy Blogger"</a>, making navigation easy to create and predictable to use. Don't want navigation? Simply disable it from your site configuration.</td>
+        <td>Add and customize your site's global navigation. After Dark uses Hugo's <a target="feature" href="https://gohugo.io/extras/menus#section-menu-for-the-lazy-blogger">Section Menu for "the Lazy Blogger"</a>, making navigation easy to create and predictable to use. Don't want navigation? Simply disable it from your site configuration.</td>
       </tr>
       <tr>
         <td><a href="#intelligent-lazyloading">Intelligent Lazyloading</a></td>
@@ -487,6 +491,6 @@ If you think you've spotted a bug or would like to make an enhancement suggestio
 
 ## License
 
-ISC
+[ISC](https://github.com/comfusion/after-dark/blob/master/LICENSE)
 
 [lazysizes]: https://github.com/aFarkas/lazysizes
