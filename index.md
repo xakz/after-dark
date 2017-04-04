@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://www.npmjs.com/package/after-dark"><img src="https://img.shields.io/npm/dm/after-dark.svg" alt="NPM downloads per month"></a>
+  <a href="https://www.npmjs.com/package/after-dark"><img src="https://img.shields.io/npm/v/after-dark.svg" alt="Latest NPM version"></a>
+  <a href="https://github.com/comfusion/after-dark/blob/master/LICENSE"><img src="https://img.shields.io/github/license/comfusion/after-dark.svg" alt="Project license"></a>
+</p>
+
 <img align="center" src="https://raw.githubusercontent.com/comfusion/after-dark/master/images/minimal-mac.png" title="After Dark running on a MacBook and iPhone" alt="After Dark theme screenshots">
 
 ## Features
@@ -108,7 +114,7 @@
 
 ## Demo & Tutorial
 
-Head to [Hack Cabin](https://hackcabin.com) for a **live example** running on <abbr title="Amazon Web Services">AWS</abbr> and to learn more about the [site architecture](https://hackcabin.com/post/initial-commit/). I've also written a [step-by-step guide](http://go.habd.as/zero-to-http-2) to hosting After Dark on Amazon, which includes a free year of professional hosting.
+Head to [Hack Cabin](https://hackcabin.com) for a **live example** running on <abbr title="Amazon Web Services">AWS</abbr> and learn more about the [site architecture](https://hackcabin.com/post/initial-commit/). I've also written a [step-by-step guide](http://go.habd.as/zero-to-http-2) to hosting After Dark on Amazon, which includes a **free year of hosting**. For cloud hosting using a VPS, [Vultr](http://go.habd.as/2oiL54G) and [DigitalOcean](http://go.habd.as/2oDN04T) are options.
 
 ## Getting Started
 
