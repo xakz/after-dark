@@ -44,7 +44,7 @@
       </tr>
       <tr>
         <td><a href="#theme-variants">Personalization</a></td>
-        <td>Not completely satisfied with the default look-and-feel? Customize the theme to your liking using one of the available theme tariants provided by <a target="feature" href="http://hackcss.com/">hack.css</a>.</td>
+        <td>Not completely satisfied with the default look-and-feel? Customize the theme to your liking using one of the available theme variants provided by <a target="feature" href="http://hackcss.com/">hack.css</a>.</td>
       </tr>
       <tr>
         <td><a href="#section-menu">Section Menu</a></td>
