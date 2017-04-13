@@ -34,7 +34,7 @@
       </tr>
       <tr>
         <td>Performance Optimized</td>
-        <td>Page content and styles <b>load in a single request</b> on all pages. External resources, if present, are loaded asynchronously and only when necessary. This keeps pages zippy and affords <b>~1 second page loads over 2G</b> when hosted using a <abbr title="Content Delivery Network">CDN</abbr>.</td>
+        <td>Page content, favicon and styles <b>load in a single request</b> on all pages. External resources, if present, are loaded asynchronously and only when necessary. This keeps pages zippy and affords <b>~1 second page loads over 2G</b> when hosted using a <abbr title="Content Delivery Network">CDN</abbr>.</td>
       </tr>
       <tr>
         <td>Vertical Scaling</td>
@@ -49,8 +49,8 @@
         <td>Using <a target="feature" href="https://moz.com/learn/seo/schema-structured-data">Schema Structured Data</a> and meta tags, After Dark gives crawlers rich data about the site structure and content. No configuration required.</td>
       </tr>
       <tr>
-        <td><a href="#theme-variants">Personalization</a></td>
-        <td>Not completely satisfied with the default look-and-feel? Customize the theme to your liking using one of the available theme variants provided by <a target="feature" href="http://hackcss.com/">hack.css</a>.</td>
+        <td><a href="#personalization">Personalization</a></td>
+        <td>Adjust CSS using purpose-built [customization file](#custom-css). Choose one of several [theme variants](#theme-variants). Swap in [your own favicon](#favicon). Leverage the [block templates](https://gohugo.io/templates/blocks) to quickly extend new custom layouts. And use [hack.css](http://hackcss.com/dark.html) flexbox grids and CSS components to add style your site.</td>
       </tr>
       <tr>
         <td><a href="#section-menu">Section Menu</a></td>
@@ -144,7 +144,7 @@ Finally, include the settings in your site's `config.toml`:
 baseurl = "https://c74ce35e.ngrok.io" # Controls base URL
 languageCode = "en-US" # Controls html lang attribute
 title = "After Dark" # Homepage title and page title suffix
-paginate = 5 # Number of posts to show before paginating
+paginate = 11 # Number of posts to show before paginating
 
 # theme = "after-dark" # Uncomment to use as default theme
 
@@ -170,7 +170,7 @@ That's it! Everything else is optional. Read on to learn how to configure specif
 
 ### Section Menu
 
-Theme uses [Section Menu for Lazy Bloggers](https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger) to produce global site navigation if enabled.
+After Dark uses Hugo's [Section Menu for Lazy Bloggers](https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger) to produce global site navigation if enabled.
 
 To customize the menu, update the settings in `config.toml` like:
 
@@ -241,7 +241,7 @@ related_content_limit = 5
 
 ### Table Of Contents
 
-Help users locate and share information on your site. By providing a <abbr title="Table Of Contents">TOC</abbr>, users will spend less time scrolling to location information in larger documents and are more likely to deep to specific information on a page.
+Help users locate and share information on your site. By providing a <abbr title="Table Of Contents">TOC</abbr>, users will spend less time scrolling to locate information in larger documents and are more likely to deep to specific information on a page.
 
 To automatically generate a TOC for a post based on the [page outline](https://gsnedders.html5.org/outliner/), add the following to your post front matter:
 
@@ -482,7 +482,11 @@ Once configured, syntax highlighting with Pygments can be achieved using the Hug
 
 **Not completely satisfied?** [Atom One Pygments](https://github.com/comfusion/atom-one-pygments) is built as a theme roller, making it possible to modify the look-and-feel of the resulting syntax highlighting. Make it your own. See the [README](https://github.com/comfusion/atom-one-pygments/blob/master/README.md) for more details.
 
-### Custom CSS
+### Personalization
+
+After Dark uses [hack.css](http://hackcss.com/dark.html) to automatically style your markup, giving you instant access to flexbox grids, light and dark theme variants, and other pre-built components. Use them while creating new [sections](#section-menu) leveraging [block templates](https://gohugo.io/templates/blocks). Additional personalization options listed below.
+
+#### Custom CSS
 
 To add your own theme CSS or override existing CSS without having to change theme files do the following:
 
@@ -501,7 +505,7 @@ Example customization file:
 
 Your customizations will automatically be added to generated pages, inline in the document `HEAD`. Thanks to [@rsommerard](https://github.com/rsommerard) for making the suggestion.
 
-### Theme Variants
+#### Theme Variants
 
 [`hack.css`](http://hackcss.com/) provides a few variants you may wish to use instead of the After Dark defaults. To download them do an `npm i` from `/themes/after-dark/` (assumes NPM installed).
 
@@ -515,9 +519,15 @@ Once the vendor file is updated, open your favorite dev tools and test the chang
 
 And, finally, adjust your [Customized CSS](#custom-css), 404 page and `/meta/theme-color` as necessary.
 
+#### Favicon
+
+After Dark comes preinstalled with a tiny SVG favicon embedded into every page. To customize it create a file named `favicon.html` under `/layouts/partials` within your site and place an [`icon` link](http://devdocs.io/html/link_types#icon) within it.
+
+**Why SVG?** Simple. They have a smaller file size and are more flexible. SVG favicons can be styled with CSS or even animated with JavaScript. Firefox added support for them in Release 41, and Chrome has [an open issue](https://bugs.chromium.org/p/chromium/issues/detail?id=294179) tracking the support request.
+
 ## Contributing
 
-If you've spotted a bug or would like to make an enhancement suggestion, please [open an issue on GitHub](https://github.com/comfusion/after-dark/issues). Build something awesome with After Dark? [Add it to the wiki](https://github.com/comfusion/after-dark/wiki) for others to see. For general questions or support, please feel free to reach out to me directly at: [https://habd.as/contact](https://habd.as/contact). Thanks!
+If you've spotted a bug or would like to make an enhancement suggestion, please [open an issue on GitHub](https://github.com/comfusion/after-dark/issues). Build something awesome with After Dark? [Add it to the wiki](https://github.com/comfusion/after-dark/wiki) for others to see. For general questions or support, please feel free to [reach out directly](https://comfusionllc.com/contact).
 
 ## License
 
